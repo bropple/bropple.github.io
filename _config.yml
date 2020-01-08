@@ -1,0 +1,56 @@
+# Site Settings
+baseurl: ""
+url : "https://bropple.github.io"
+
+# Blog Settings
+theme_settings :
+  title : Benjamin Ropple
+  favicon : assets/icon.png
+
+  # Profile Settings
+  profile :
+    image : assets/img/profile.jpg
+    username : Benjamin Ropple
+    description : Electrical Engineering Student
+    #experience :  #Add in stuff as you get jobs!
+     # - start : 2017-05-03
+     #   end : 2018-05-06
+     #   experience : company name, title
+    skills : 
+      - skill : Digital Integrated Circuit Design
+        #value : 90
+      - skill : PCB Design
+        #value : 80
+      - skill : C Programming
+        #value : 85  # Percent value
+      - skill : Power Electronics
+        #value : 75
+      - skill : Embedded Systems
+        
+  # Icons
+  icons :
+    email:  ben.ropple@gmail.com
+    linkedin: https://www.linkedin.com/in/benjamin-ropple-66aaa1124/ 
+    github: bropple
+    gitlab: 
+    bitbucket: 
+    google_plus:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+  # Disqus
+  disqus_shortname :
+
+# Pagination
+paginate: 5
+paginate_path: "blog/page:num"
+
+# Build Ssttings
+sass:
+  sass_dir: _sass
+  style: :compressed
+gems: [jekyll-paginate]
+bootstrap:
+  assets: true

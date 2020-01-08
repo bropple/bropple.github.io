@@ -1,0 +1,110 @@
+---
+layout: default
+---
+<div id="home">
+  <!-- Responsive Header -->
+  <section id="header-nav">
+    {% include header.html %}
+  </section>
+  <section id="header-content">
+    <h1>{{ site.theme_settings.title }}</h1>
+  </section>
+  <section class="bg"></section>
+  <div class="row">
+    <!-- Aside Navigation  -->
+    <aside id="aside" class="col-md-4"> <!--style="background-color:#003263; border: 5px solid #B0D7FF"-->
+      {% include aside.html %}
+    </aside>
+    <!-- Post List -->
+    <section id="posts" class="col-md-8">
+    
+     <p>    <br/>
+            
+            <h2> About Me </h2>
+            
+            Hi, my name is Benjamin Ropple.  I'm an electrical engineering student attending the University of Maine in Orono, ME.  I'm currently in the final semester of my senior year. I will be graduating in May 2020.
+            
+            <br/><br/>
+            
+            Projects I've worked on, my relevant skills, and various links are listed on my <a class="plink" href="{{ site.url }}/portfolio"  >portfolio page</a>. A more detailed description is available on my <a class="plink" href="https://www.linkedin.com/in/benjamin-ropple-66aaa1124/">LinkedIn</a>.
+            
+            <br/><br/>
+            
+            I am currently searching for full-time employment. Feel free to contact me via  <a class="plink" href="mailto:ben.ropple@gmail.com"  >e-mail </a>  or <a class="plink" href="https://www.linkedin.com/in/benjamin-ropple-66aaa1124/">LinkedIn</a>.
+            
+     </p>
+     
+      {% for post in paginator.posts %}
+      <div class="post">
+        <a href="{{ post.url | relative_url }}">
+          <div class="post-wrap">
+            <div class="text-warp">
+              <h3 class="title">{{ post.title }}</h3>
+              <p class="excerpt">
+                {% if post.excerpt.size > 50 %}
+                {{ post.excerpt | strip_html | strip_newlines | truncatewords: 25, '...' }}
+                {% else %}
+                {{ post.subtitle }}
+                {% endif %}
+              </p>
+              <div>
+                <span class="meta">
+                  {{ post.date | date: "%B %-d, %Y" }}
+                </span>
+                <ul class="tag-wrap">
+                  {% for tag in post.tags %}
+                  <a href="{{site.baseurl}}/tags#{{ tag | cgi_escape }}">
+                    <li class="tag-sm">{{ tag }}</li>
+                  </a>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% if post.image %}
+            <div class="img-wrap">
+              <img src="{{ post.image }}" alt="">
+            </div>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+      <!-- Pagination -->
+      {% if paginator.total_pages > 1 %}
+      <div id="pagination">
+        <ul>
+          {% assign q = paginator.page | divided_by: 5 %}
+          {% assign min = q | times: 5  %}
+          {% assign max = q | plus: 1 | times: 5 | minus: 1 %}
+          {% if min == 0 %}
+          {% assign min = 1 %}
+          {% endif %}
+          {% if max > paginator.total_pages %}
+          {% assign max = paginator.total_pages %}
+          {% endif %}
+          {% if min != 1 %}
+          <a href="/blog/page{{ min | minus: 1 }}">
+            <li class="btn-rounded prev">
+              <i class="fas fa-angle-double-left"></i>
+            </li>
+          </a>
+          {% endif %}
+          {% for page in (min..max) %}
+          <a href="{% if page == 1 %}/{% else %}/blog/page{{ page }}{% endif %}"
+            class="{% if page == paginator.page %}selected{% endif %}">
+            <li class="btn-rounded">{{ page }}</li>
+          </a>
+          {% endfor %}
+          {% if max != paginator.total_pages %}
+          <a href="/blog/page{{ max | plus: 1 }}">
+            <li class="btn-rounded next">
+              <i class="fas fa-angle-double-right"></i>
+            </li>
+          </a>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
+    </section>
+  </div>
+</div>

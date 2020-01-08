@@ -1,0 +1,23 @@
+- project :
+    print : True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    url : https://github.com/bropple/pisynth # Full URL
+    image : "Pi.jpg" # path: assets/project/
+    date : 1/7/2020
+    title : PiSynth
+    summary : Hardware FM Synthesizer driven by a Raspberry Pi 3B+.
+    
+    contents :
+        - title : Overview
+          #image : P
+          description : <li>Pisynth is a hardware FM Synthesizer featuring Yamaha YM3438 FM synthesis chips and a Texas Instruments SN76489AN tone generator.</li>
+
+#- project :
+    #print : True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    #modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    #url :  # Full URL
+    #image : # path: assets/project/
+    #date : 2019.06.09 - Developing
+    #title : Dummy project
+    #summary : This is Dummy
+    #description :  
