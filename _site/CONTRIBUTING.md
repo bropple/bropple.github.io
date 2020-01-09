@@ -1,3 +1,3 @@
 # HOW TO CONTRIBUTE
 
-- Please send a pull request into the `develop` branche.
+- Please send a pull request to the `develop` branch.
