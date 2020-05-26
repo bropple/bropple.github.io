@@ -11,8 +11,8 @@ theme_settings :
   profile :
     image : assets/img/profile.jpg
     username : Benjamin Ropple
-    description : Electrical Engineering Student
-    #experience :  #Add in stuff as you get jobs!
+    description : B.S. Electrical Engineering
+    #experience :
      # - start : 2017-05-03
      #   end : 2018-05-06
      #   experience : company name, title
