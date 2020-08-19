@@ -4,3 +4,4 @@ gemspec
 
 gem 'github-pages'
 gem "jekyll-paginate"
+gem "kramdown", ">= 2.3.0"
