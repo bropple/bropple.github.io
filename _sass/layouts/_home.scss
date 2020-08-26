@@ -6,13 +6,14 @@
         }
     }
     #header-nav, #header-content, .bg{
-        display:none;
+        display:block;
         @media (max-width: 991px) {
            display: block;
         }
     }
     #header-content{
         @extend %page-padding;
+        display:none;
         margin-bottom: 30px;
         color: #fff;
     }
@@ -36,7 +37,7 @@
         .post{
             width: 100%;
             overflow: hidden;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid $theme-color;
             padding: 15px 0px;
             .post-wrap{
                 margin : 25px;
@@ -44,23 +45,26 @@
                 .text-warp {
                     display: inline-block;
                     .title {
+                        color : $text-white;
                         position: relative;
                         line-height: 2rem;
                     }
-                    .title::before {
+                    .title::before { //the oval decoration in front of post titles
                         content: "";
                         position: absolute;
                         left: -25px;
                         width: 8px;
-                        background-color: rgba(0,0,0,0.1);
+                        //background-color: rgba(0,0,0,0.1);
+                        background-color: $theme-color;
                         border-radius: 8px;
                         height: 100%;
                     }
                     .excerpt{
+                        color : $text-white;
                         margin : 10px 0px;
                     }
                     .meta {
-                        color : $text-gray;
+                        color : $text-white; //date text for posts
                         font-size: 0.85rem;
                         margin-right : 10px;
                     }
@@ -68,11 +72,11 @@
                         display : inline-block;
                         .tag-sm {
                             display: inline-block;
-                            background-color: rgba(0,0,0,0.07);
+                            background-color: rgba(0,0,0,0.25);
                             margin-right: 3px;
                             padding: 2px 9px;
                             border-radius: 15px;
-                            color: $text-gray;
+                            color: $theme-bright;
                             font-size: 0.75rem;
                         }
                         .tag-sm:hover {
@@ -136,20 +140,20 @@
 }
 
 a.plink:link {
-  color: blue;
+  color: $text-hyperlink-unclicked;
 }
 
 /* visited link */
 a.plink:visited {
-  color: purple;
+  color: $text-hyperlink-clicked;
 }
 
 /* mouse over link */
 a.plink:hover {
-  color: lightblue;
+  text-decoration: underline;
 }
 
 /* selected link */
 a.plink:active {
-  color: blue;
+  text-decoration: underline;
 }

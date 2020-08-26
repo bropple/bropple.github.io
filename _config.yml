@@ -26,6 +26,13 @@ theme_settings :
       - skill : Power Electronics
         #value : 75
       - skill : Embedded Systems
+        #value : 85
+      - skill : MATLAB
+        #value : 90
+      - skill: NGspice
+        #value : 85
+      - skill: Altium Designer
+        #value : 85
         
   # Icons
   icons :

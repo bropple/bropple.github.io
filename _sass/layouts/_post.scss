@@ -10,7 +10,7 @@
             font-size : 1.2rem;
         }
         .meta{
-            color : $text-gray;
+            color : $text-white;
             font-size: 0.85rem;
             margin-top : 15px;
         }
@@ -44,7 +44,7 @@
     }
     width: 45px;
     height: 45px;
-    background-color: $theme-dark;
+    background-color: $theme-color;
     color : rgba(0,0,0,0.7);
     border-radius: 15px;
     text-align: center;

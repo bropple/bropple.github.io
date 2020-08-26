@@ -2,8 +2,14 @@ $theme-color : #0492d9;
 $theme-bright : #50c2fb;
 $theme-dark : #036596;
 $theme-dark2 : #024364;
+$theme-darkbg: #282828;
+$theme-darkbg-alpha: rgba(40, 40, 40, 0.85);
+$theme-black: #000000;
+$text-hyperlink-unclicked: #00B0EE;
+$text-hyperlink-clicked:   #CA00EE;
 $text : rgba(0,0,0,0.8);
 $text-gray : rgba(0,0,0,0.54);
+$text-white : rgba(255, 255, 255, 0.9);
 
 %page-padding {
     padding : 0px 15%!important;

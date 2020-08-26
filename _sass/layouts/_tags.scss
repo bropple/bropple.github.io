@@ -8,21 +8,21 @@
         top: 105px;
         left:0%;
         height: 95px;
-        background-color: $theme-dark;
+        background-color: $theme-color;
     }
     h1.title{
-        color:#fff;
+        color: $text-white;
     }
     .tag-cloud{
-        margin : 70px 0 30px;
+        margin-top : 10px;
         li{
             background-color: $theme-color;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             margin-right : 3px;
             padding: 0px 15px;
             border-radius: 20px;
-            color: #fff;
+            color: $text-white;
             font-weight: 600;
             font-size: 0.8rem;
             line-height: 35px;
@@ -47,11 +47,11 @@
                 position : relative;
                 margin: 25px 0;
                 .meta{
-                    color: $text-gray;
+                    color: $text-white;
                     font-size : 0.85rem;
                 }
                 .title{
-                    color : rgba(0,0,0,0.7);
+                    color : $text-white;
                     font-weight :600;
                 }
             }
@@ -60,7 +60,7 @@
                 position: absolute;
                 left: -5%;
                 width: 8px;
-                background-color: rgba(0,0,0,0.1);
+                background-color: $theme-color;
                 border-radius: 8px;
                 height: 100%;
             }

@@ -1,7 +1,15 @@
 header{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     @extend %page-padding;
     nav{
+        background-image: linear-gradient(to bottom right, $theme-dark2, $theme-dark, $theme-color);
+        border-radius: 15px;
+        border: 2px solid $theme-bright;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        //margin-left: 10px;
+        //margin-right: 10px;
         ul{
             li{
                 position: relative;
@@ -9,6 +17,7 @@ header{
                 margin-right : 5%;
                 font-size: 1rem;
                 line-height: 2.3rem; 
+                color: $text-white;
             }
             .current {
                 font-weight: 700;

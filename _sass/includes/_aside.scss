@@ -1,9 +1,48 @@
 #aside{
+    //background-color: $theme-dark2;
+    background-image: url("pcb.jpg"); //PCB image
+    //background-image: linear-gradient($theme-dark2, $theme-dark, $theme-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    border: 2px solid $theme-bright;
     text-align: center;
-    padding : 0px 2%;
-    #profile, #tag-wrap {
+    padding : 8px 2%;
+    #tag-wrap {
         margin-bottom: 60px;
     }
+    
+    #profile{
+        border-radius: 25px;
+        border: 2px solid $theme-bright;
+        background-color: $theme-darkbg-alpha;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+        padding-top: 5px;
+        width: 85%;
+    }
+    
+    #icons li {
+        i {
+          width: 40px;
+          height: 40px;
+          color: $text-white;
+          background-color: $theme-dark2;
+          border: 1px solid $theme-bright;
+          line-height: 40px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        i:hover {
+          background-color: $theme-darkbg;
+          color: $theme-color;
+        }
+      }
+    
     p b{
         // color: $theme-color;
         letter-spacing: -0.05rem;
@@ -17,6 +56,7 @@
         height: 180px;
         border-radius: 15px;
         background-color: #ddd;
+        border: 2px solid $theme-bright;
         margin : 30px 0px;
         img {
             width : 100%;
@@ -35,7 +75,8 @@
     .img-wrap:hover::before{
         background: rgba($theme-color, 0.1);
     }
-    .title, .username  {
+    .title  {
+        color: $text-white;
         font-size : 1.1rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -45,25 +86,45 @@
     .title:hover{
         color: $theme-color;
     }
+    .username{
+        color: $text-white;
+        font-size : 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
     .description{
         font-size : 0.95rem;
     }
+    //.username, .description{
+//
+   // }
     #proj-wrap{
+        border-radius: 15px;
+        border: 2px solid $theme-bright;
+        background-color: $theme-darkbg-alpha;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 60%;
         .proj-title {
+            color: $text-white;
             font-weight: 600;
             font-size: 0.9rem;
         }
         .meta, .meta span{
-            color: rgba(0,0,0,0.5);
+            color: $text-white;
             font-size: 0.75rem;
             margin : 3px 0 10px;
         }
         .proj-hr{
             width: 100px;
-            border : 0.5px solid rgba(0,0,0,0.1);
+            border : 0.5px solid $theme-bright;
         }
         .proj-content:hover *{
-            color: $theme-dark;
+            color: $theme-color;
         }
     }
 }

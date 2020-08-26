@@ -7,7 +7,7 @@
     margin-bottom: 55px;
     p.title {
       padding-left: 10px;
-      color: $theme-dark;
+      color: $theme-color;
       font-size: 25px;
       font-weight: 600;
     }
@@ -45,13 +45,16 @@
         transform: scale(1);
 
         overflow: hidden;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: rgba($theme-dark2, 0.15) 0px 1px 5px;
+        //background-color: #fff;
+        background-image: linear-gradient(to bottom, $theme-dark, $theme-dark2, $theme-color);
+        border-radius: 25px;
+        border: 2px solid $theme-bright;
+        box-shadow: rgba($theme-dark, 0.35) 0px 1px 5px;
         .img-wrap {
           position: relative;
           overflow: hidden;
           height: 200px;
+          border-bottom: 2px solid $theme-bright;
           @media (max-width: 576px) {
             display: none;
           }
@@ -72,11 +75,11 @@
           padding: 20px 25px;
           // height: 180px;
           .title {
-            color: $theme-dark;
+            color: $text-white;
             font-weight: 600;
           }
           .date {
-            color: rgba(0, 0, 0, 0.5);
+            color: $text-white;
             font-size: 0.75rem;
             margin: 0;
           }
@@ -103,16 +106,19 @@
               margin-left: 8px;
               text-align: center;
               i {
-                width: 30px;
-                height: 30px;
-                background-color: rgba(0, 0, 0, 0.07);
+                width: 35px;
+                height: 35px;
+                background-color: $theme-darkbg;
+                color: $text-white;
                 border-radius: 50%;
+                border: 1px solid $theme-bright;
+                //text-align: center;
                 font-size: 0.8rem;
-                line-height: 1.8rem;
+                line-height: 32px;
               }
             }
             a.modal-btn i {
-              background-color: $theme-dark;
+              background-color: $theme-dark2;
               color: #fff;
               font-size: 0.75rem;
             }
@@ -133,13 +139,19 @@
               -ms-transition-duration: 0.5s;
               -o-transition-duration: 0.5s;
               transition-duration: 0.5s;
-              background-color: $theme-color;
+              background-color: $theme-dark;
               color: #fff;
             }
           }
           a:hover {
             i {
-              background-color: $theme-dark;
+              background-color: $theme-dark2;
+              color: #fff;
+            }
+          }
+        a.modal-btn:hover {
+            i {
+              background-color: $theme-darkbg;
               color: #fff;
             }
           }

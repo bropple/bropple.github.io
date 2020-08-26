@@ -36,9 +36,22 @@
             margin: 5px auto;
         }
     }
-    a {
-        color: #4F86C6;
+    
+    a:link {
+        color: $text-hyperlink-unclicked;
+        text-decoration: none;
     }
+    a:visited{
+        color: $text-hyperlink-clicked;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    a:active{
+        text-decoration: underline;
+    }
+    
     img {
         width : 96%;
         margin : 2%;
@@ -61,7 +74,7 @@
     }
     blockquote {
         background: #ced3d638;
-        color: rgba(0,0,0,0.5);
+        color: $text-white;
         margin: 10px auto;
         padding: 8px 20px;
         * { font-size: 16px; }

@@ -13,25 +13,29 @@
       <a href="{{ site.url }}/portfolio">
         <li class="btn-nav">Portfolio</li>
       </a>
+      <a href="{{ site.url }}/tags">
+        <li class="btn-nav">Tags</li>
+      </a>
       <!-- portfolio -->
       {% when 'portfolio'%}
       <a href="{{ site.url }}">
         <li class="btn-nav">Main</li>
       </a>
-      <!--<a href="{{ site.url }}/tags">
-        <li class="btn-nav">Tags</li>
-      </a>-->
       <li class="current">Portfolio</li>
+      </a>
+      <a href="{{ site.url }}/tags">
+        <li class="btn-nav">Tags</li>
+      </a>
       {% else %}
       <!-- others -->
       <a href="{{ site.url }}">
         <li class="current btn-nav">Main</li>
       </a>
-     <!-- <a href="{{ site.url }}/tags">
-        <li class="btn-nav">Tags</li>
-      </a>-->
       <a href="{{ site.url }}/portfolio">
         <li class="btn-nav">Portfolio</li>
+      </a>
+      <a href="{{ site.url }}/tags">
+        <li class="btn-nav">Tags</li>
       </a>
       <!--<ul id="icons">
             {% include icons.html %}

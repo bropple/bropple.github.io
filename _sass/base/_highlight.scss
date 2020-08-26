@@ -6,20 +6,20 @@
 }
 
 // https://github.com/richleland/pygments-css
-.hll { background-color: #ffffcc }
+.hll { background-color: $theme-black; }
 .c { color: #c1bb9d; font-style: italic } /* Comment */
-.err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.err { color: #a61717; background-color: $theme-black; } /* Error */
 .k { color: #000000; font-weight: bold } /* Keyword */
 .o { color: #000000; font-weight: bold } /* Operator */
 .cm { color: #c1bb9d; font-style: italic } /* Comment.Multiline */
 .cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
 .c1 { color: #c1bb9d; font-style: italic } /* Comment.Single */
 .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
-.gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.gd { color: #000000; background-color: $theme-black; } /* Generic.Deleted */
 .ge { color: #000000; font-style: italic } /* Generic.Emph */
 .gr { color: #aa0000 } /* Generic.Error */
 .gh { color: #999999 } /* Generic.Heading */
-.gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.gi { color: #000000; background-color: $theme-black; } /* Generic.Inserted */
 .go { color: #888888 } /* Generic.Output */
 .gp { color: #555555 } /* Generic.Prompt */
 .gs { font-weight: bold } /* Generic.Strong */
@@ -70,10 +70,10 @@
 
 
 // http://jwarby.github.io/jekyll-pygments-themes/languages/python.html 
-.highlight pre { background-color: #272822; }
-.highlight .hll { background-color: #272822; }
+.highlight pre { background-color: $theme-black; }
+.highlight .hll { background-color: $theme-black; }
 .highlight .c { color: #c1bb9d; } /* Comment */
-.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .err { color: #960050; background-color: $theme-black; } /* Error */
 .highlight .k { color: #66d9ef } /* Keyword */
 .highlight .l { color: #ae81ff } /* Literal */
 .highlight .n { color: #f8f8f2 } /* Name */
@@ -137,5 +137,5 @@
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
 // add style
-.language-shell { color: #f8f8f2;}
-.language-html { color: #f8f8f2;}
+.language-shell { color: #39ff14;}
+.language-html { color: #39ff14;}
